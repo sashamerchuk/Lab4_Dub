@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
+    version="6.8.0" timestamp="2019-05-09T23:42:14.656">
+<file name="C:\Users\User\Desktop\Lab3_CreativeGood\src\main\java\ua\lviv\iot\creativity\manager\ICreativityManager.java">
+<violation beginline="9" endline="9" begincolumn="12" endcolumn="82" rule="UnnecessaryModifier" ruleset="Code Style" package="ua.lviv.iot.creativity.manager" class="ICreativityManager" method="sortByPrice" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#unnecessarymodifier" priority="3">
+Unnecessary modifier 'public' on method 'sortByPrice': the method is declared in an interface type
+</violation>
+<violation beginline="11" endline="11" begincolumn="12" endcolumn="97" rule="UnnecessaryModifier" ruleset="Code Style" package="ua.lviv.iot.creativity.manager" class="ICreativityManager" method="sortByName" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#unnecessarymodifier" priority="3">
+Unnecessary modifier 'public' on method 'sortByName': the method is declared in an interface type
+</violation>
+<violation beginline="13" endline="13" begincolumn="12" endcolumn="91" rule="UnnecessaryModifier" ruleset="Code Style" package="ua.lviv.iot.creativity.manager" class="ICreativityManager" method="findByType" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#unnecessarymodifier" priority="3">
+Unnecessary modifier 'public' on method 'findByType': the method is declared in an interface type
+</violation>
+</file>
+</pmd>

@@ -1,0 +1,6 @@
+type,price,name,diameter
+FISHING,30,Needle,30
+type,price,name,length
+WEAVING,10,Thread,5
+WEAVING,25,Tissue,widthheight
+WEAVING,25,Tissue,10,25

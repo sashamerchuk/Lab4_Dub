@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.18">
+<file name="C:\Users\User\Desktop\Lab3_CreativeGood\src\main\java\ua\lviv\iot\creativity\manager\CreativityGoodWriter.java">
+</file>
+<file name="C:\Users\User\Desktop\Lab3_CreativeGood\src\main\java\ua\lviv\iot\creativity\manager\CreativityManager.java">
+</file>
+<file name="C:\Users\User\Desktop\Lab3_CreativeGood\src\main\java\ua\lviv\iot\creativity\manager\ICreativityManager.java">
+</file>
+<file name="C:\Users\User\Desktop\Lab3_CreativeGood\src\main\java\ua\lviv\iot\creativity\model\CreativityGood.java">
+<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\User\Desktop\Lab3_CreativeGood\src\main\java\ua\lviv\iot\creativity\model\Needle.java">
+<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\User\Desktop\Lab3_CreativeGood\src\main\java\ua\lviv\iot\creativity\model\Thread.java">
+<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\User\Desktop\Lab3_CreativeGood\src\main\java\ua\lviv\iot\creativity\model\Tissue.java">
+</file>
+<file name="C:\Users\User\Desktop\Lab3_CreativeGood\src\main\java\ua\lviv\iot\creativity\model\Type.java">
+</file>
+<file name="C:\Users\User\Desktop\Lab3_CreativeGood\src\main\java\ua\lviv\iot\main\Main.java">
+<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+</checkstyle>
