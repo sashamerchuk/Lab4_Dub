@@ -23,9 +23,9 @@ class TestCreativityGoodWriter {
     CreativityGoodWriter creativityGoodWriter;
     private String filePath = "csvFile";
     
-    Needle needle = new Needle("Needle",30,Type.FISHING,30);
-    Thread thread = new Thread("Thread",10,Type.WEAVING,5);
-    Tissue tissue = new Tissue("Tissue",25,Type.WEAVING,10,25);
+    Needle needle = new Needle("Needle",32,Type.FISHING,39);
+    Thread thread = new Thread("Thread",15,Type.WEAVING,5);
+    Tissue tissue = new Tissue("Tissue",13,Type.FISHING,10,25);
     
     @BeforeEach
     void setUp() {
@@ -45,7 +45,6 @@ class TestCreativityGoodWriter {
                 InputStreamReader inputSR = new InputStreamReader(fileIS);
                 BufferedReader buffReader = new BufferedReader(inputSR);
                 ){
-            
             for(CreativityGood creativityG : creativityGood) {
                 assertEquals(creativityG.getHeaders(), buffReader.readLine());
                 assertEquals(creativityG.toCSV(), buffReader.readLine());

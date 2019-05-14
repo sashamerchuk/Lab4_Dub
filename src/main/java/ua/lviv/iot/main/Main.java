@@ -19,7 +19,7 @@ public class Main {
 
         Needle neddle = new Needle("Tissue", 100, Type.FISHING, 1234);
         Tissue tissue = new Tissue("Needle", 321, Type.WEAVING, 23, 53);
-        Thread thread = new Thread("Thread", 31, Type.WEAVING, 100);
+        Thread thread = new Thread("Thread", 31, Type.FISHING, 100);
 
         List<CreativityGood> creativityGood = new ArrayList<>();
         creativityGood.add(neddle);

@@ -35,11 +35,11 @@ public class Tissue extends CreativityGood {
 }
 @Override
     public String getHeaders() {
-        return super.toCSV() + "," + "width" + "height";
+        return super.toCSV() + " ," + " width" + " height";
     }
 
 @Override
     public String toCSV() {
-        return super.toCSV() + "," + this.width + "," + this.height;
+        return super.toCSV() + " ," + this.width + " ," + this.height;
     }
 }
