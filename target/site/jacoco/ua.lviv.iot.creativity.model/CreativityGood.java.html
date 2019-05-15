@@ -41,11 +41,13 @@ public class CreativityGood {
     public void setType(Type type) {
 <span class="fc" id="L42">        this.type = type;</span>
 <span class="fc" id="L43">    }</span>
+
     public String getHeaders() {
-<span class="fc" id="L45">        return &quot;type&quot; + &quot;,&quot; + &quot;price&quot; + &quot;,&quot; + &quot;name&quot;;</span>
+<span class="fc" id="L46">        return &quot;type&quot; + &quot;,&quot; + &quot;price&quot; + &quot;,&quot; + &quot;name&quot;;</span>
     }
-public String toCSV() {
-<span class="fc" id="L48">return this.type + &quot;,&quot; + this.price + &quot;,&quot; + this.name;</span>
-}
+
+    public String toCSV() {
+<span class="fc" id="L50">        return this.type + &quot;,&quot; + this.price + &quot;,&quot; + this.name;</span>
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

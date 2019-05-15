@@ -6,54 +6,51 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import ua.lviv.iot.creativity.manager.CreativityGoodWriter;
 import ua.lviv.iot.creativity.model.*;
 import ua.lviv.iot.creativity.model.Thread;
-import ua.lviv.iot.creativity.manager.CreativityGoodWriter;
 
 class TestCreativityGoodWriter {
-
-    List<CreativityGood> creativityGood = new ArrayList<>();
+    List<CreativityGood> testCreativityGood = new ArrayList<>();
     CreativityGoodWriter creativityGoodWriter;
     private String filePath = "csvFile";
     
-    Needle needle = new Needle("Needle",32,Type.FISHING,39);
-    Thread thread = new Thread("Thread",15,Type.WEAVING,5);
-    Tissue tissue = new Tissue("Tissue",13,Type.FISHING,10,25);
+    Needle needle = new Needle("Needle", 100, Type.FISHING, 100 );
+    Thread thread = new Thread("Thread", 150,Type.FISHING,100);
+    Tissue tissue = new Tissue("Tissue",200,Type.FISHING,100,100);
     
     @BeforeEach
     void setUp() {
-        creativityGood.add(needle);
-        creativityGood.add(thread);
-        creativityGood.add(tissue);
+        testCreativityGood.add(needle);
+        testCreativityGood.add(thread);
+        testCreativityGood.add(tissue);
         
         creativityGoodWriter = new CreativityGoodWriter(filePath);
     }
     
+    
     @Test
-    void testWriterToFile() {
-        File csvFile = new File(filePath);
-        creativityGoodWriter.writeToFile(creativityGood);
+    void testWriterToFile(){
+        File cvsFile = new File(filePath);
+        creativityGoodWriter.writeToFile(testCreativityGood);
         
-        try(FileInputStream fileIS = new FileInputStream(csvFile);
-                InputStreamReader inputSR = new InputStreamReader(fileIS);
-                BufferedReader buffReader = new BufferedReader(inputSR);
-                ){
-            for(CreativityGood creativityG : creativityGood) {
-                assertEquals(creativityG.getHeaders(), buffReader.readLine());
-                assertEquals(creativityG.toCSV(), buffReader.readLine());
+        try(FileInputStream fis = new FileInputStream(cvsFile);
+                InputStreamReader isr= new InputStreamReader(fis);
+                BufferedReader bufReader = new BufferedReader(isr);){
+            for( CreativityGood creativityGood: testCreativityGood) {
+                assertEquals(creativityGood.getHeaders(), bufReader.readLine());
+                assertEquals(creativityGood.toCSV(),bufReader.readLine());
             }
+                      
         }catch(Exception e) {
+            
             e.printStackTrace();
         }
-                
     }
-    
-
 }

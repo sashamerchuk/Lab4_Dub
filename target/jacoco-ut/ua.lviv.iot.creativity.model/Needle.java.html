@@ -23,12 +23,12 @@ public class Needle extends CreativityGood {
 <span class="fc" id="L23">        this.diameter = diameter;</span>
 <span class="fc" id="L24">    }</span>
 
-@Override
+    @Override
     public String getHeaders() {
 <span class="fc" id="L28">        return super.getHeaders() + &quot;,&quot; + &quot;diameter&quot;;</span>
     }
 
-@Override
+    @Override
     public String toCSV() {
 <span class="fc" id="L33">        return super.toCSV() + &quot;,&quot; + this.diameter;</span>
     }

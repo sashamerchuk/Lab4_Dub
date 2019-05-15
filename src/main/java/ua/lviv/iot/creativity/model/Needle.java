@@ -23,12 +23,12 @@ public class Needle extends CreativityGood {
         this.diameter = diameter;
     }
 
-@Override
+    @Override
     public String getHeaders() {
         return super.getHeaders() + "," + "diameter";
     }
 
-@Override
+    @Override
     public String toCSV() {
         return super.toCSV() + "," + this.diameter;
     }

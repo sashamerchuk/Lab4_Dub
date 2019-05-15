@@ -32,15 +32,16 @@ public class Tissue extends CreativityGood {
 
     public void setHeight(int height) {
 <span class="fc" id="L34">        this.height = height;</span>
-<span class="fc" id="L35">}</span>
-@Override
+<span class="fc" id="L35">    }</span>
+
+    @Override
     public String getHeaders() {
-<span class="fc" id="L38">        return super.toCSV() + &quot;,&quot; + &quot;width&quot; + &quot;height&quot;;</span>
+<span class="fc" id="L39">        return super.toCSV() + &quot;,&quot; + &quot; width&quot; + &quot; height&quot;;</span>
     }
 
-@Override
+    @Override
     public String toCSV() {
-<span class="fc" id="L43">        return super.toCSV() + &quot;,&quot; + this.width + &quot;,&quot; + this.height;</span>
+<span class="fc" id="L44">        return super.toCSV() + &quot;,&quot; + this.width + &quot;,&quot; + this.height;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

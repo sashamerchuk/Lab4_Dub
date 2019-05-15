@@ -24,12 +24,13 @@ public class Thread extends CreativityGood {
     public void setLength(int length) {
         this.length = length;
     }
+
     @Override
     public String getHeaders() {
         return super.getHeaders() + "," + "length";
     }
 
-@Override
+    @Override
     public String toCSV() {
         return super.toCSV() + "," + this.length;
     }
