@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CreativityGoodWriter.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Lab4_Maven</a> &gt; <a href="index.source.html" class="el_package">ua.lviv.iot.creativity.manager</a> &gt; <span class="el_source">CreativityGoodWriter.java</span></div><h1>CreativityGoodWriter.java</h1><pre class="source lang-java linenums">package ua.lviv.iot.creativity.manager;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
+import java.util.List;
+
+import ua.lviv.iot.creativity.model.CreativityGood;
+
+public class CreativityGoodWriter{
+    
+    private String filePath;
+    
+<span class="nc" id="L16">    public CreativityGoodWriter() {};</span>
+    
+<span class="fc" id="L18">    public CreativityGoodWriter(String filePath) {</span>
+<span class="fc" id="L19">        this.filePath = filePath;</span>
+<span class="fc" id="L20">    }</span>
+    
+    public void writeToFile(List&lt;CreativityGood&gt; creativityGood) {
+<span class="fc" id="L23">        File cvsFile= new File(filePath + &quot;.csv&quot;);</span>
+        
+<span class="fc" id="L25">        try(FileOutputStream fos = new FileOutputStream(cvsFile);</span>
+<span class="fc" id="L26">                OutputStreamWriter ow = new OutputStreamWriter(fos, StandardCharsets.UTF_8);</span>
+<span class="fc" id="L27">                BufferedWriter bufWrite= new BufferedWriter(ow);){</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">            for(CreativityGood good : creativityGood) {</span>
+<span class="fc" id="L29">                bufWrite.write(good.getHeaders());</span>
+<span class="fc" id="L30">                bufWrite.newLine();</span>
+<span class="fc" id="L31">                bufWrite.write(good.toCSV());</span>
+<span class="fc" id="L32">                bufWrite.newLine();</span>
+<span class="fc" id="L33">            }</span>
+<span class="nc" id="L34">        } catch(Exception e) {</span>
+<span class="nc" id="L35">            e.printStackTrace();</span>
+<span class="fc" id="L36">        }</span>
+<span class="fc" id="L37">    }</span>
+    
+    public String getFilePath() {
+<span class="nc" id="L40">        return filePath;</span>
+    }
+    
+    public void setFilePath(String filePath) {
+<span class="nc" id="L44">        this.filePath = filePath;</span>
+<span class="nc" id="L45">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

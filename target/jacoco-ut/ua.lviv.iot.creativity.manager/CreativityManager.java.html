@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CreativityManager.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Lab4_Maven</a> &gt; <a href="index.source.html" class="el_package">ua.lviv.iot.creativity.manager</a> &gt; <span class="el_source">CreativityManager.java</span></div><h1>CreativityManager.java</h1><pre class="source lang-java linenums">package ua.lviv.iot.creativity.manager;
+
+import ua.lviv.iot.creativity.model.CreativityGood;
+import ua.lviv.iot.creativity.model.Type;
+
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class CreativityManager implements ICreativityManager {
+
+<span class="fc" id="L13">    public CreativityManager() {</span>
+
+<span class="fc" id="L15">    }</span>
+
+    @Override
+    public void sortByPrice(List&lt;CreativityGood&gt; creativityGood, boolean reverse) {
+<span class="pc bpc" id="L19" title="1 of 2 branches missed.">        if (reverse) {</span>
+<span class="fc" id="L20">            Collections.sort(creativityGood, Comparator.comparing(CreativityGood::getPrice).reversed());</span>
+        }else{
+<span class="nc" id="L22">            Collections.sort(creativityGood, Comparator.comparing(CreativityGood::getPrice));</span>
+    }
+<span class="fc" id="L24">    }</span>
+
+    @Override
+    public List&lt;CreativityGood&gt; sortByName(List&lt;CreativityGood&gt; creativityGood, boolean reverse) {
+<span class="pc bpc" id="L28" title="1 of 2 branches missed.">        if(reverse) {</span>
+<span class="fc" id="L29">            Collections.sort(creativityGood, Comparator.comparing(CreativityGood::getName).reversed());</span>
+        }else {
+<span class="nc" id="L31">            Collections.sort(creativityGood, Comparator.comparing(CreativityGood::getName));</span>
+        }
+<span class="fc" id="L33">        return creativityGood;</span>
+        }
+
+    @Override
+    public List&lt;CreativityGood&gt; findByType(List&lt;CreativityGood&gt; creativityGood, Type type) {
+<span class="fc" id="L38">        List&lt;CreativityGood&gt; findCreativityGoodsList = creativityGood.stream()</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">                .filter(creativitygood -&gt; creativitygood.getType() == type).collect(Collectors.toList());</span>
+<span class="fc" id="L40">        return findCreativityGoodsList;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

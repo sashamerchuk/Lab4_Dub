@@ -1,0 +1,6 @@
+type,price,name,diameter
+FISHING,100,Needle,100
+type,price,name,length
+FISHING,150,Thread,100
+FISHING,200,Tissue, width height
+FISHING,200,Tissue,100,100

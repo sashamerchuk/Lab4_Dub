@@ -1,0 +1,9 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Lab4_Maven,ua.lviv.iot.creativity.model,Tissue,18,57,0,0,1,14,1,8,1,8
+Lab4_Maven,ua.lviv.iot.creativity.model,CreativityGood,22,56,0,0,1,18,1,10,1,10
+Lab4_Maven,ua.lviv.iot.creativity.model,Type,0,24,0,0,0,2,0,1,0,1
+Lab4_Maven,ua.lviv.iot.creativity.model,Needle,13,42,0,0,1,10,1,6,1,6
+Lab4_Maven,ua.lviv.iot.creativity.model,Thread,13,42,0,0,1,10,1,6,1,6
+Lab4_Maven,ua.lviv.iot.creativity.manager,CreativityManager,8,41,2,4,2,11,2,6,0,5
+Lab4_Maven,ua.lviv.iot.creativity.manager,CreativityGoodWriter,13,66,0,2,6,15,3,3,3,2
+Lab4_Maven,ua.lviv.iot.main,Main,64,0,0,0,14,0,2,0,2,0
