@@ -1,4 +1,7 @@
+
 package ua.lviv.iot.creativity.model;
+
+import ua.lviv.iot.creativity.model.Type;
 
 public class CreativityGood {
     private int price;

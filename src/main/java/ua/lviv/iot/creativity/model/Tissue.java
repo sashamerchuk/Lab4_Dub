@@ -1,5 +1,8 @@
 package ua.lviv.iot.creativity.model;
 
+import ua.lviv.iot.creativity.model.CreativityGood;
+import ua.lviv.iot.creativity.model.Type;
+
 public class Tissue extends CreativityGood {
 
     private int width;

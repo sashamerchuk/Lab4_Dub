@@ -19,7 +19,7 @@ import ua.lviv.iot.creativity.model.Thread;
 class TestCreativityGoodWriter {
     List<CreativityGood> testCreativityGood = new ArrayList<>();
     CreativityGoodWriter creativityGoodWriter;
-    private String filePath = "csvFile";
+    private String filePath = "csvFile.csv";
     
     Needle needle = new Needle("Needle", 100, Type.FISHING, 100 );
     Thread thread = new Thread("Thread", 150,Type.FISHING,100);
@@ -32,6 +32,10 @@ class TestCreativityGoodWriter {
         testCreativityGood.add(tissue);
         
         creativityGoodWriter = new CreativityGoodWriter(filePath);
+    }
+    @BeforeEach
+    void tearDown() {
+        testCreativityGood.clear();
     }
     
     

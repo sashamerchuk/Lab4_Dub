@@ -25,7 +25,7 @@ public class Main {
         creativityGood.add(neddle);
         creativityGood.add(tissue);
         creativityGood.add(thread);
-
+        
         creativityManager.sortByPrice(creativityGood, false);
         System.out.println(creativityGood);
 

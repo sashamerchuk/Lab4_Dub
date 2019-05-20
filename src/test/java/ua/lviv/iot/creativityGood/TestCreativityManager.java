@@ -28,6 +28,7 @@ public class TestCreativityManager  {
     Thread thread = new Thread("Thread",10,Type.WEAVING,5);
     Tissue tissue = new Tissue("Tissue",25,Type.WEAVING,10,25);
     
+    
     @BeforeEach
     void setUp() {
         testCreativityGood.add(needle);
